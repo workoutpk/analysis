@@ -4,21 +4,23 @@ let planetSchema = new mongoose.Schema({
         type: mongoose.Schema.ObjectId,
         ref: 'star'
     },
-    callingOn: {
+    planet_name: {
        type:String,
-       default:0
+       default:null
     },
-    userId: {
-        type: mongoose.Schema.ObjectId,
-        ref: 'User'
-    },
-    typeOfCalling: {
+    planet_geometry: [{
         type:Number,
         default:0
-    },   // 1:Audio call, 2: Video call 3: chat
-    duration: {
-        type:String,
-        default:0
+    }],   
+    planet_location: {
+        type: {
+            type: String,
+            default: 'Point'
+        },
+        coordinates: [{
+            type:Number,
+            default:0
+        }]
     },
     
 }, {

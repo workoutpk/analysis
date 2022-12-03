@@ -21,7 +21,17 @@ exports.galaxyAdd = async(req,res)=>{
         let createGalaxy = new GalaxyModel(galaxyObj)
         createGalaxy =  await createGalaxy.save()
         
-        res.status(HttpStatus.CREATED).json({ response: createGalaxy, message: 'success!' });
+        res.status(HttpStatus.CREATED).json({ data: createGalaxy, message: 'success!' });
+    } catch (error) {
+        res.status(HttpStatus.BAD_REQUEST).json({ message: error.message });
+    }
+}
+exports.galaxyAll = async(req,res)=>{
+    try {
+    
+        let galaxyList =  await GalaxyModel.find()
+        
+        res.status(HttpStatus.SUCCESS_STATUS).json({ data: galaxyList, message: 'success!' });
     } catch (error) {
         res.status(HttpStatus.BAD_REQUEST).json({ message: error.message });
     }

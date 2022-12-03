@@ -6,6 +6,7 @@
     "start": "nodemon ./bin/www"
   },
   "dependencies": {
+    "autocannon": "^7.10.0",
     "cluster": "^0.7.7",
     "compression": "^1.7.4",
     "cookie-parser": "~1.4.4",
@@ -17,6 +18,7 @@
     "mongoose": "^6.7.3",
     "morgan": "~1.9.1",
     "nodemon": "^2.0.20",
-    "os": "^0.1.2"
+    "os": "^0.1.2",
+    "realm": "^11.3.0"
   }
 }
