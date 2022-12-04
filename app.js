@@ -7,6 +7,7 @@ var autocannon      = require('autocannon')
 var starsRouter     = require('./routes/star');
 var indexRouter     = require('./routes/index');
 var usersRouter     = require('./routes/users');
+var adminRouter     = require('./routes/admin');
 var visionRouter    = require('./routes/vision');
 var galaxyRouter    = require('./routes/galaxy');
 var planetRouter    = require('./routes/planet');
@@ -45,6 +46,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/admin', adminRouter);
 app.use('/stars', starsRouter);
 app.use('/planet', planetRouter);
 app.use('/galaxy', galaxyRouter);
