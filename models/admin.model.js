@@ -1,4 +1,4 @@
-const { mongoose, } = require('../services/mongoose');
+const { mongoose, } = require('../config/db.connection');
 let adminSchema = new mongoose.Schema({
     user_status: {
         type: Number,

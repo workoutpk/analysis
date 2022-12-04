@@ -1,4 +1,4 @@
-const { mongoose, } = require('../services/mongoose');
+const { mongoose, } = require('../config/db.connection');
 let galaxySchema = new mongoose.Schema({
     // galxy_system: {
     //     type: mongoose.Schema.ObjectId,

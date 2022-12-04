@@ -1,4 +1,4 @@
-const { mongoose, } = require('../services/mongoose');
+const { mongoose, } = require('../config/db.connection');
 let  publishSchema = new mongoose.Schema({
     planet_id: {
         type: mongoose.Schema.ObjectId,

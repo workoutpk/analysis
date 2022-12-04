@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var controller =  require('../controller/AdminController')
+var controller =  require('../controller/admin.controller')
 var multer = require('multer');
 var md5 = require('md5');
 var path = require('path');

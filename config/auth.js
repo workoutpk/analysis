@@ -1,8 +1,8 @@
 const APP_ENV = require('../config/application.properties')
 const jwt = require('jsonwebtoken'); // used to create, sign, and verify tokens
-const { AdminModel }= require("../models/AdminModel")
-const { UserModel }= require("../models/UserModel")
-const { SubAdminModel }= require("../models/SubAdminModel")
+const { AdminModel }= require("../models/admin.model")
+const { UserModel }= require("../models/user.model")
+const { SubAdminModel }= require("../models/sub.admin.model")
 exports.verifyAdminToken = async (req, res, next) => {
     // check header or url parameters or post parameters for token
     let { access_token } = req.headers;

@@ -1,7 +1,7 @@
-const { GalaxyModel }= require("../models/GalaxyModel")
+const { GalaxyModel }= require("../models/galaxy.model")
 const Joi = require('joi');
-const HttpStatus = require('../module/StatusModule')
-const GenerateName = require('../module/GenerateModule')
+const HttpStatus = require('../module/status.module')
+const GenerateName = require('../module/generate.module')
 
 exports.galaxyAdd = async(req,res)=>{
     try {

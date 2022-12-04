@@ -1,7 +1,7 @@
-const { VisionModel }= require("../models/VisionModel")
+const { VisionModel }= require("../models/vision.model")
 const Joi = require('joi');
-const HttpStatus = require('../module/StatusModule')
-const GenerateName = require('../module/GenerateModule')
+const HttpStatus = require('../module/status.module')
+const GenerateName = require('../module/generate.module')
 const Realm = require("realm");
 const { UUID } = Realm.BSON;
 exports.visionAdd = async(req,res)=>{

@@ -5,7 +5,7 @@ var http = require('http');
 var cluster = require('cluster');
 var os = require('os');
 var numCPUs = require('os').cpus().length;
-var { mongoose } = require('../services/mongoose');
+var { mongoose } = require('../config/db.connection');
 //DB Connection
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'mongodb'));
@@ -105,9 +105,9 @@ db.once('open', () =>
             cluster.fork();
         });
     }else{
-        app.listen(3000, () => {
+        app.listen(3001, () => {
         
-            console.log(`Analysis DB connected, thread  has been started with port/id Port: 3000/${process.pid} `)
+            console.log(`Eclyt DB connected, thread  started with port/id : 3001/${process.pid} `)
         });
     }
 }

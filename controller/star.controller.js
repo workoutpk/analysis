@@ -1,7 +1,7 @@
-const { StarModel }= require("../models/StarModel")
+const { StarModel }= require("../models/star.model")
 const Joi = require('joi');
-const HttpStatus = require('../module/StatusModule')
-const GenerateName = require('../module/GenerateModule')
+const HttpStatus = require('../module/status.module')
+const GenerateName = require('../module/generate.module')
 const Realm = require("realm");
 const { UUID } = Realm.BSON;
 exports.starAdd = async(req,res)=>{

@@ -1,4 +1,4 @@
-const { mongoose, } = require('../services/mongoose');
+const { mongoose, } = require('../config/db.connection');
 let planetSchema = new mongoose.Schema({
     solar_system: {
         type: mongoose.Schema.ObjectId,
