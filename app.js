@@ -13,8 +13,25 @@ var galaxyRouter = require('./routes/galaxy');
 var planetRouter = require('./routes/planet');
 var publishRouter = require('./routes/publish');
 var compression = require('compression');
-var rateLimit = require('express-rate-limit')
-
+var rateLimit = require('express-rate-limit');
+var options = {
+    explorer: true,
+    swaggerOptions: {
+      urls: [
+        {
+          url: 'http://petstore.swagger.io/v2/swagger.json',
+          name: 'Spec1'
+        },
+        {
+          url: 'http://petstore.swagger.io/v2/swagger.json',
+          name: 'Spec2'
+        }
+      ]
+    }
+}
+const swaggerUi = require('swagger-ui-express');
+const swaggerJsdoc = require('swagger-jsdoc');
+const cors = require('cors');
 const limiter = rateLimit({
     max: 200,
     windowMs: 60 * 60 * 1000,
@@ -48,7 +65,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(null, options));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/admin', adminRouter);
@@ -62,7 +79,14 @@ app.use('/publish', publishRouter);
 app.use(function (req, res, next) {
     next(createError(404));
 });
-
+// app.use(cors({
+//     origin: ['http://localhost:4200'],
+//     "methods": "GET,PUT,POST",
+//     "preflightContinue": false,
+//     "optionsSuccessStatus": 204,
+//     credentials: true
+// }));
+app.use(cors())
 // error handler
 app.use(function (err, req, res, next) {
     // set locals, only providing error in development
