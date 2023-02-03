@@ -14,19 +14,20 @@ var planetRouter = require('./routes/planet');
 var publishRouter = require('./routes/publish');
 var compression = require('compression');
 var rateLimit = require('express-rate-limit');
+var glob = require ("glob");
 var options = {
     explorer: true,
     swaggerOptions: {
-      urls: [
-        {
-          url: 'http://petstore.swagger.io/v2/swagger.json',
-          name: 'Spec1'
-        },
-        {
-          url: 'http://petstore.swagger.io/v2/swagger.json',
-          name: 'Spec2'
-        }
-      ]
+        urls: [
+            {
+                url: 'http://petstore.swagger.io/v2/swagger.json',
+                name: 'Spec1'
+            },
+            {
+                url: 'http://petstore.swagger.io/v2/swagger.json',
+                name: 'Spec2'
+            }
+        ]
     }
 }
 const swaggerUi = require('swagger-ui-express');
@@ -62,11 +63,12 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(cors())
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(null, options));
-app.use('/', indexRouter);
+// app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/admin', adminRouter);
 app.use('/stars', starsRouter);
@@ -75,10 +77,7 @@ app.use('/galaxy', galaxyRouter);
 app.use('/vision', visionRouter);
 app.use('/publish', publishRouter);
 
-// catch 404 and forward to error handler
-app.use(function (req, res, next) {
-    next(createError(404));
-});
+
 // app.use(cors({
 //     origin: ['http://localhost:4200'],
 //     "methods": "GET,PUT,POST",
@@ -86,7 +85,7 @@ app.use(function (req, res, next) {
 //     "optionsSuccessStatus": 204,
 //     credentials: true
 // }));
-app.use(cors())
+
 // error handler
 app.use(function (err, req, res, next) {
     // set locals, only providing error in development
@@ -97,6 +96,13 @@ app.use(function (err, req, res, next) {
     res.status(err.status || 500);
     res.render('error');
 });
+app.use('/', express.static(path.join(__dirname,  'dist','eclyt')));
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname,  'dist', 'eclyt', 'index.html'));
+});
 
-
+// catch 404 and forward to error handler
+app.use(function (req, res, next) {
+    next(createError(404));
+});
 module.exports = app;
