@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 //  const conn = mongoose.connect("mongodb://127.0.0.1:27017/analysis")
 
  const conn = mongoose.connect('mongodb://pk_Usr:pk_Ass0505@127.0.0.1:27017/pk_db', { useNewUrlParser: true, useUnifiedTopology: true, }); //for server
+//  const conn = mongoose.connect('mongodb://pk_Usr:pk_Ass0505@3.108.174.209:27017/pk_db', { useNewUrlParser: true, useUnifiedTopology: true, }); //for server
   
 
 
