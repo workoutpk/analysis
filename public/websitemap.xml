@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<urlset xmlns="http://www.google.com/schemas/sitemap/0.84" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.8 http://www.sitemaps.org/schemas/sitemap/0.8/sitemap.xsd">
+
+
+<url>
+  <loc>https://www.eclyt.com/home</loc>
+  <priority>1.0</priority>
+
+  	<lastmod>2023-01-25T15:36:48+01:00</lastmod>
+</url>
+<url>
+  <loc>https://www.eclyt.com/eclyt-plus</loc>
+  <priority>0.8</priority>
+
+  	<lastmod>2023-01-25T15:36:48+01:00</lastmod>
+</url>
+<url>
+  <loc>https://www.eclyt.com/analysis</loc>
+  <priority>0.8</priority>
+
+  	<lastmod>2023-01-25T15:36:48+01:00</lastmod>
+</url>
+<url>
+  <loc>https://www.eclyt.com/survey</loc>
+  <priority>0.8</priority>
+
+  	<lastmod>2023-01-25T15:36:48+01:00</lastmod>
+</url>
+<url>
+  <loc>https://www.eclyt.com/observation></loc>
+  <priority>0.8</priority>
+
+  	<lastmod>2023-01-25T15:36:48+01:00</lastmod>
+</url>
+
+<url>
+  <loc>https://apps.eclyt.com/terms-use</loc>
+  <priority>0.8</priority>
+
+  	<lastmod>2023-01-25T15:36:48+01:00</lastmod>
+</url>
+
+<url>
+  <loc>https://www.eclyt.com/privacy-policy</loc>
+  <priority>0.8</priority>
+ 
+  	<lastmod>2023-01-25T15:36:48+01:00</lastmod>
+</url>
+
+<url>
+  <loc>https://www.eclyt.com/map-globe-working-hours</loc>
+  <priority>0.8</priority>
+ 
+  	<lastmod>2023-01-25T15:36:48+01:00</lastmod>
+</url>
+<url>
+  <loc>https://www.eclyt.com/about</loc>
+  <priority>0.8</priority>
+ 
+  	<lastmod>2023-01-25T15:36:48+01:00</lastmod>
+</url>
+<url>
+  <loc>https://www.eclyt.com/contact</loc>
+  <priority>0.8</priority>
+ 
+  	<lastmod>2023-01-25T15:36:48+01:00</lastmod>
+</url>
+
+
+
+
+
+
+
+</urlset>

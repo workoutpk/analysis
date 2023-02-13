@@ -2,7 +2,16 @@
     width: 100%;
     height: 400px;
 }
-
+#header > nav > div > a.navbar-brand > img{
+    max-width: -25px;
+    width: 35px;
+    height: 35px;
+}
+#headerAfterScroll > nav > div > a.navbar-brand > img{
+    max-width: -25px;
+    width: 35px;
+    height: 35px;
+}
 #chartdiv1 {
     width: 100%;
     height: 400px;
@@ -44,15 +53,17 @@ canvas .AmChartsLogo {
 
 .header .navbar-brand {
     padding: 0;
-    
+
 }
+
 /* .header .nav .container li .nav-item a {
     padding: 0;
     color: #eb354e;
 } */
-body > app-root > app-home > app-header > header > nav > div > ul > li:nth-child(1) > a{
+body>app-root>app-home>app-header>header>nav>div>ul>li:nth-child(1)>a {
     color: #eb354e;
 }
+
 /* #hamburger{
     color: #eb354e;
 } */
@@ -99,22 +110,35 @@ main {
     z-index: 99;
     backdrop-filter: blur(10px);
 }
-.footer{
+
+.footer {
     display: none;
 }
-.phone{
+
+.header-phone {
     display: none;
 }
-.intro-section-title{
+
+#grad1 {
+    display: none;
+}
+
+.phone {
+    display: none;
+}
+
+.intro-section-title {
     margin-top: -150px;
 }
-.top_sec{
+
+.top_sec {
     margin-top: -50px;
 }
 
 /* (min-width:768px) */
-@media  only screen and (max-width: 768px)  {
+@media only screen and (max-width: 768px) {
     .footer {
+        text-align: center;
         width: 100%;
         height: auto;
         position: fixed;
@@ -137,8 +161,8 @@ main {
         backdrop-filter: saturate(125%) blur(10px);
         display: block;
     }
-    
-    
+
+
     .footer .btn {
         width: 60px;
         height: 60px;
@@ -148,7 +172,7 @@ main {
         display: block;
         vertical-align: middle;
     }
-    
+
     .footer .btn i {
         width: 24px;
         margin: 0 auto;
@@ -156,48 +180,260 @@ main {
         vertical-align: middle;
         position: relative;
     }
-    
+
     .footer .btn.active i:after {
         content: "";
         left: 0;
         right: 0;
         bottom: -8px;
         height: 4px;
-        width: 70%;
+        width: 100%;
         border-radius: 2px;
         display: block;
         margin: 0 auto;
         position: absolute;
     }
-    #headerAfterScroll > nav > div > ul > li:nth-child(2) > a{
+
+    #headerAfterScroll>nav>div>ul>li:nth-child(2)>a {
         display: none;
     }
-    #header > nav > div > ul > li:nth-child(2) > a{
+
+    #header>nav>div>ul>li:nth-child(2)>a {
         display: none;
     }
-    #intro_section{
+
+    #intro_section {
         display: none;
     }
-    #footer > div > div.row.list-bunch{
+
+    #footer>div>div.row.list-bunch {
         display: none;
     }
-    #header{
+
+    #header {
         display: none;
     }
-    .phone{
+
+    .phone {
         display: block;
     }
-    .phone-div{
-       
-        background-color:  #eb354e;
+
+    .phone-div {
+
+        background-color: #eb354e;
         height: 350px;
-        width: 100%;        
+        width: 100%;
         display: block;
         position: absolute;
     }
- 
-    
+
+    #headerAfterScroll {
+        display: none;
+    }
+
+    .header-phone {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        /* padding: 5px 5px; */
+        z-index: 99;
+        backdrop-filter: blur(10px);
+        display: inline-block;
+    }
+
+    .header-phone .navbar-brand {
+        padding: 0;
+    }
+
+    .header-phone .navbar-brand>img {
+        max-height: 44px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+
+    .header-phone .navbar-brand h6 {
+        /* font-size: 20px; */
+        color: #2F2D51;
+        vertical-align: middle;
+        display: inline-block;
+        margin-top: 0;
+        margin-left: 10px;
+    }
+    .ml-plus {
+       margin-right: -15px;
+       font-size: 18px;
+       font-weight: 700;
+    }
+    .icon-size-35{
+        width: 35px;
+        height: 35px;
+    }
+    #grad1 {
+
+        height: 200px;
+        background-color: #eb354e;
+        /* background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(235, 53, 78, 0.8)); */
+        display: block;
+    }
+   
 }
 
 
+/* You can add global styles to this file, and also import other style files */
+.mobile-open{
+    display: none;
+}
+.prp{
+    background-color: #d22a3d;
+    height: 150px;
+    border-radius: 20px ;
+    padding: 20px 0;
+}
+.slidehome {
+    top: -200px;
+    position: relative;
+}
+.prp h2{
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    color: #FFF;
+}
+.bg-hm{
+    /* padding: 40px; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+    border-radius: 20px;
+    position: relative;
+    max-width: 420px;
+    margin: 0 10px;
+    
+}
+.card-hm {
+    width: 100%;
+    display: flex;
+  
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    color: white;
+    padding: 30px;
+    transform: translateX(-50%);
+    backdrop-filter: blur(40px);
+}
+.card-hm .left{
+    width: 70%;
+    background-color: #FFF;
+    padding: 10px 15px;
+}
+.card-hm .left{
+    font-size: 16px;
+    color: #000;
+}
+.card-hm .right{
+    width: 30%;
+    background-color: red;
+    padding: 10px 15px;
+}
+.card-hm .right p{
+    color: #FFF;
+    font-size: 16px;
+}
+/* 
+.hm-slider .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+    background-color: #d22a3d !important;
+} */
 
+.cs-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    /* padding: 20px 15px; */
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-bottom: 20px;
+}
+.cs-card .left{
+    width: 60%;
+}
+.cs-card .left h3{
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+}
+.cs-card .left p{
+    color: #000;
+    font-size: 15px;
+    font-weight: 400;
+}
+.cs-card .right{
+    width: 40%;
+    text-align: right;
+}
+.cs-card .right .btn{
+    border-radius: 100px;
+}
+.filter-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.filter-header select{
+    font-size: 16px;
+    color: #d22a3d;
+    font-weight: bold;
+    border: 0;
+}
+.hm-slider .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+    background-color: #d22a3d !important;
+}
+/* .hm-slider .owl-theme .owl-dots .owl-dot span{
+    background:transparent !important;
+    border: 1px solid #d22a3d !important;
+} */
+
+
+
+
+.mobile-footer-menu{
+    padding: 10px 10px;
+    background-color: #fff;
+    display: none;
+    z-index: 9999;
+}
+
+.mobile-footer-menu ul{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+.mobile-footer-menu ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+}
+.mobile-footer-menu ul li.active a{
+    color: #e42e3e;
+}
+.mobile-footer-menu ul li a i{
+    display: block;
+}
+@media (max-width: 767px) {
+    .mobile-footer-menu{
+        display: block;
+    }
+    .mobile-open{
+        display: block;
+    }
+    section{
+        padding: 40px 0;
+    }
+}
