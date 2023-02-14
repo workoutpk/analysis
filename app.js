@@ -50,7 +50,7 @@ function shouldCompress(req, res) {
 
 
 var app = express();
-app.use(limiter);
+// app.use(limiter);
 app.use(compression(
     {
         level: 6,
