@@ -33,11 +33,6 @@ var options = {
 const swaggerUi = require('swagger-ui-express');
 const swaggerJsdoc = require('swagger-jsdoc');
 const cors = require('cors');
-const limiter = rateLimit({
-    max: 200,
-    windowMs: 60 * 60 * 1000,
-    message: "Too many request from this IP"
-});
 
 function shouldCompress(req, res) {
     if (req.headers['x-no-compression']) {
