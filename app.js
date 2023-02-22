@@ -91,8 +91,8 @@ app.use(function (err, req, res, next) {
     res.status(err.status || 500);
     res.render('error');
 });
-app.use('/', express.static(path.join(__dirname,  'dist','eclyt')));
-app.get('/', (req, res) => {
+app.use('/web', express.static(path.join(__dirname,  'dist','eclyt')));
+app.get('/*', (req, res) => {
     res.sendFile(path.join(__dirname,  'dist', 'eclyt', 'index.html'));
 });
 
